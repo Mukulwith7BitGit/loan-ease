@@ -1,2 +1,2 @@
-# loan-ease
-A bank loan application.
+# LoanEase - A bank loan application 🏦
+

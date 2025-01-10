@@ -10,16 +10,19 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .hero-section {
   background: linear-gradient(to right, #0074D9, #2E86C1);
   color: white;
   text-align: center;
   padding: 100px 20px;
 }
+
 .hero-section h1 {
   font-size: 2.5rem;
   font-weight: bold;
 }
+
 .loan-calculator {
   background: #fff;
   padding: 30px;
@@ -27,23 +30,15 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-top: -50px;
 }
+
 .features {
   padding: 50px 20px;
   background: #f3f3f3;
 }
+
 .features h2 {
   text-align: center;
   margin-bottom: 30px;
-}
-footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 20px 10px;
-}
-footer a {
-  color: #1abc9c;
-  text-decoration: none;
 }
 
 .contact-us {
@@ -66,7 +61,7 @@ footer a {
   font-size: 1.1rem;
 }
 
-.contact-us-label{
+.contact-us-label {
   color: white;
 }
 
@@ -78,4 +73,86 @@ footer a {
 .contact-us .btn-primary {
   padding: 10px 20px;
   font-size: 1rem;
+}
+
+.footer {
+  background: #212529;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.footer h3 {
+  color: white;
+}
+
+.footer h4 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.footer-about,
+.footer-contact,
+.footer-social {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-about p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-contact ul li {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-contact ul li i {
+  color: #2E86C1;
+  ;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.footer-social .social-icons a {
+  color: #bbb;
+  font-size: 20px;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+  color: #2E86C1;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid #555;
+  padding-top: 10px;
+  font-size: 0.8rem;
+}
+
+.footer-meta-data {
+  color: #b7b7b7;
 }

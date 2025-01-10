@@ -45,3 +45,37 @@ footer a {
   color: #1abc9c;
   text-decoration: none;
 }
+
+.contact-us {
+  padding: 50px 20px;
+  background: linear-gradient(to right, #0074D9, #2E86C1);
+  border-top: 2px solid #ddd;
+}
+
+.contact-us h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: white;
+}
+
+.contact-us p {
+  text-align: center;
+  margin-bottom: 40px;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.contact-us-label{
+  color: white;
+}
+
+.contact-us .form-control {
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+.contact-us .btn-primary {
+  padding: 10px 20px;
+  font-size: 1rem;
+}

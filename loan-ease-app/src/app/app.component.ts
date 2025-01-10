@@ -10,5 +10,5 @@ import { NavbarComponent } from './pages/navbar/navbar.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'load-ease-app';
+  title = 'loan-ease-app';
 }

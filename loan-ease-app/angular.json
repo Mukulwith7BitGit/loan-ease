@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "load-ease-app": {
+    "loan-ease-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/load-ease-app",
+            "outputPath": "dist/loan-ease-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "load-ease-app:build:production"
+              "buildTarget": "loan-ease-app:build:production"
             },
             "development": {
-              "buildTarget": "load-ease-app:build:development"
+              "buildTarget": "loan-ease-app:build:development"
             }
           },
           "defaultConfiguration": "development"

@@ -6,7 +6,7 @@
     "start": "ng serve",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build": "ng build --output-path docs --base-href /loan-ease/",
+    "build": "ng build --output-path ../docs --base-href /loan-ease/",
     "postbuild": "echo > ../docs/.nojekyll && npx ncp ../docs/browser ../docs/ && rmdir /S /Q ../docs/browser",
     "deploy": "ng build --output-path ../docs --base-href /loan-ease/ && npm run postbuild"
   },

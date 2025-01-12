@@ -4,9 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build": "ng build --output-path docs --base-href /loan-ease/",
+    "postbuild": "echo > docs/.nojekyll",
+    "deploy": "ng build --output-path docs --base-href /loan-ease/ && npm run postbuild && mv docs ../docs"
   },
   "private": true,
   "dependencies": {

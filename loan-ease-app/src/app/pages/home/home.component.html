@@ -11,13 +11,26 @@
     <form>
         <div class="mb-3">
             <label for="amount" class="form-label">Loan Amount (Rs.)</label>
-            <input type="number" id="amount" class="form-control" placeholder="Enter amount" />
+            <input type="number" id="amount" class="form-control" [(ngModel)]="loanPrincipleAmount"
+                name="loanPrincipleAmount" placeholder="Enter amount" />
+        </div>
+        <div class="mb-3">
+            <label for="term" class="form-label">Interest Rate (%)</label>
+            <input type="number" id="term" class="form-control" [(ngModel)]="loanAnnualInterest"
+                name="loanAnnualInterest" placeholder="Enter annual rate (e.g., 7.5)" />
         </div>
         <div class="mb-3">
             <label for="term" class="form-label">Loan Term (months)</label>
-            <input type="number" id="term" class="form-control" placeholder="Enter months" />
+            <input type="number" id="term" class="form-control" [(ngModel)]="loanTermInMonths" name="loanTermInMonths"
+                placeholder="Enter months" />
         </div>
-        <button type="submit" class="btn btn-success">Calculate</button>
+        <div class="loanCalculatorFooter">
+            <button type="button" id="calculateLoan" data-bs-toggle="modal" data-bs-target="#calculateLoanModal"
+                (click)="calculateLoan()" class="btn btn-success">Calculate</button>
+            <button type="button" class="btn btn-danger" (click)="resetData()">
+                <i class="fa fa-trash"></i>
+            </button>
+        </div>
     </form>
 </section>
 
@@ -68,3 +81,47 @@
         </form>
     </div>
 </section>
+
+<!-- Calculate Loan Modal Structure -->
+<div class="modal fade" id="calculateLoanModal" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1" aria-labelledby="calculateLoanModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Calculation Results</h4>
+                <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal"
+                    style="cursor:pointer;">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h5>Calculation Method Used</h5>
+                <p><strong>Formula:</strong>
+                    <code> Monthly Payment = (P × r) / (1 - (1 + r)<sup>-n</sup>)</code>
+                </p>
+                <h5 class="mt-4">Loan Details</h5>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><strong>Loan Amount (P):</strong></td>
+                            <td> ₹ {{ loanPrincipleAmount }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Interest Rate (r):</strong></td>
+                            <td> {{ loanAnnualInterest }} %</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Loan Term (n):</strong></td>
+                            <td> {{ loanTermInMonths }} months</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="display: flex;" class="mt-4">
+                    <h5 style="margin-right: 10px;">EMI Amount:</h5>
+                    <h4><strong>₹{{ emiAmount | number:'1.2-2' }}</strong></h4>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-dark" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

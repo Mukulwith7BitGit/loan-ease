@@ -1,5 +1,6 @@
 #loanApplications {
-    background: linear-gradient(to right, #1e3c72, #2a5298);
+    /* background: linear-gradient(to right, #1e3c72, #2a5298); */
+    background: linear-gradient(to right, #0074D9, #2E86C1);
     color: #ffffff;
     padding: 2rem 2rem;
     border-radius: 10px;
@@ -35,4 +36,8 @@ table {
 
 table th, table td {
     padding: 1rem;
+}
+
+.submitApplicationBtn {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
